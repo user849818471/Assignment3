@@ -11,4 +11,12 @@ public class MyTestingClass {
         hash = 31 * hash + id;
         return hash;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        MyTestingClass that = (MyTestingClass) obj;
+        return id == that.id;
+    }
 }
